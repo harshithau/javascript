@@ -1,0 +1,1 @@
+document.write("hello world <br/> welcome <br/>javascript<br/>hi good afternoon had your lunch")
