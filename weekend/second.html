@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>second</title>
+		<link rel="stylesheet" type="text/css" href="./css/second.css">
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	</head>
+	<body>
+		<h1>Get the total</h1>
+		<div id="costEntry">
+			<div><input type="checkbox" value="5"  class="task" name="acs">$ 5<br></div>
+			<div><input type="checkbox" value="10"  class="task" name="acs">$ 10<br></div>
+			<div><input type="checkbox" value="15" class="task" name="acs">$ 15<br></div>
+			<div><input type="checkbox" value="20" class="task" name="acs" >$20<br></div>
+			<div><input type="checkbox" value="25"  class="task"name="acs">$25<br></div>
+			<div><input type="checkbox" value="30" class="task" name="acs">$30</div>
+		</div>
+		<p class="button">
+			<input type="button" onclick='selectAll()'   class= "id1" value="Select All"/>
+			<input type="button" onclick='UnSelectAll()'  class= "id1"value="Unselect All"/>
+		</p>
+		<p>
+			<input type="submit" class="id" onclick='UpdateCost() '>
+		</p>
+	    <label class="label"><b>Get the total<b></label>
+	      <div class="main"><i  class='fas fa-angle-left' style='font-size:24px'></i> <div class="search"> search</div></div>
+	  	<div class="input"> </div>
+	  	<p class="total"><span > Total is 
+	  	<input  class="total1"   id="totalcost"></span></p>
+
+	<script type="text/javascript">
+ 			function selectAll(){
+				var items=document.getElementsByName('acs');
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='checkbox')
+						items[i].checked= true;
+				}
+			}
+			
+			function UnSelectAll(){
+				var items=document.getElementsByName('acs');
+				for(var i=0; i<items.length; i++){
+					if(items[i].type=='checkbox')
+						items[i].checked=false;
+				}
+			}
+		function UpdateCost() {
+			  var sum = 0;
+			  var sel = document.getElementById('costEntry').getElementsByTagName('input');
+			  for (i=0; i<sel.length; i++) {
+			    if (sel[i].checked == true) { sum += Number(sel[i].value); }
+			  } document.getElementById('totalcost').value = sum.toFixed(2);
+			} 
+	</script>
+
+</body>
+</html>

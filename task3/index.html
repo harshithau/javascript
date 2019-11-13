@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var expr = 'Oranges';
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  // case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    // expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log('Sorry, we are out of ' + expr + '.');
+}
+
+
+
+
+var  x =  "day1" ;
+switch (x) {
+  case "day1" :
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case day:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day2 = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+  default:
+   day = "Wednesday";
+   break;
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+var d="day1";
+  switch (d) 
+  {
+    case "day2":
+      document.write("Monday");
+      break;
+    case "day1":
+     document.write("Sunday"+"</br>");
+      break; 
+   }
+function myFunction(p1=3,p2=4) {
+  return p1 * p2;
+}
+document.write(myFunction()+"</br>");
+document.write(myFunction());
+</script>
+
+</body>
+</html>

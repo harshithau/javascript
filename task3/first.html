@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> leap year </title> 
+    <h3>Javascript </h3>
+</head>
+<body> 
+<script> 
+    function check_leapyear(){
+        
+        var year;
+ 
+       
+        year = document.getElementById("year").value;
+ if( (0 == year % 4) && (0 != year % 100) || (0 == year % 400) )
+        {
+            document.write(year+" is a leap year" +"<br/>");
+            document.write(" numberof days in feb  leap year "+  29);  
+        }
+        else
+        {
+           document.write(year+" is not a leap year"); 
+           document.write(feb + 28); 
+           
+        }
+    }
+</script>
+<input type="text" id="year"></input>
+<button onclick="check_leapyear()">sumbit</button>
+
+</body> 
+  
+</html>                     

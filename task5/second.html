@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script >
+var sample = { name:"kavya Gowda" };
+var sample1 = function(a,b,c)
+{
+    return this.name   + a + " " +b  +c;
+};
+var bound = sample1.bind(sample); 
+console.log(bound("I","choose","you!"));
+console.log(bound(" loves  Icecream","and ", "Listening Music"));
+</script>
+
+</body>
+</html>

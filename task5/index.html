@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        main
+    </title> 
+</head> 
+  
+<body> 
+ <p id="demo"></p> 
+    <script> 
+        var student = { 
+            details: function() { 
+                return this.name + "<br>" + this.class; 
+            } 
+        } 
+        var stud1 = { 
+            name:"abc", 
+            class: "11th", 
+        } 
+        var stud2 = { 
+            name:"xyz", 
+            class: "10th", 
+        } 
+          
+        var x = student.details.apply(stud2);  
+        document.getElementById("demo").innerHTML = x;  
+    </script> 
+</body> 
+  
+</html>                     
